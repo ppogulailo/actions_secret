@@ -38,5 +38,6 @@ jobs:
     steps:
       - name: "Check .env"
         run: |
-          echo "MONGODB_USERNAME: $MONGODB_USERNAME"
-          echo "MONGODB_PASSWORD: MONGODB_PASSWORD"
+          echo "MONGODB_USERNAME: $MONGODB_DB_NAME"
+          echo "MONGODB_PASSWORD: $MONGODB_PASSWORD"
+          echo "MONGO_DB ${{ secrets.SECRET_MONGO_USERNAME }}"
